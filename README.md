@@ -57,7 +57,7 @@
 | address       | string     | null: false                    |
 | building_name | string     |                                |
 | phone_number  | string     | null: false                    |
-| destination   | references | null: false, foreign_key: true |
+| basket        | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :basket
