@@ -13,6 +13,6 @@ validates :birth_day,        presence: true
 
 validates_format_of :password, with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze, message: "is invalid"
 
-# has_many :items
+has_many :items
 # has_many :baskets
 end
