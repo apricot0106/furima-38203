@@ -15,7 +15,7 @@
 
 ### Association
 - has_many :items
-- has_many :baskets
+- has_many :orders
 
 ## itemsテーブル
 
@@ -33,9 +33,9 @@
 
 ### Association
 - belongs_to :user
-- has_one :basket
+- has_one :order
 
-## basketsテーブル
+## ordersテーブル
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
@@ -57,7 +57,7 @@
 | address       | string     | null: false                    |
 | building_name | string     |                                |
 | phone_number  | string     | null: false                    |
-| basket        | references | null: false, foreign_key: true |
+| order         | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :basket
+- belongs_to :order
