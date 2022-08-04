@@ -11,7 +11,7 @@ class Item < ApplicationRecord
   validates_numericality_of :price, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, only_integer: true
 
   belongs_to :user
-  # has_one :basket
+  has_one :order
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
