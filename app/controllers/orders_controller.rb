@@ -1,7 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_item
   before_action :authenticate_user!
-  before_action :move_to_index
   before_action :contributor_confirmation
 
   def index
@@ -35,12 +34,6 @@ class OrdersController < ApplicationController
 
   def set_item
     @item = Item.find(params[:item_id])
-  end
-
-  def move_to_index
-    if current_user == @item.user
-      redirect_to root_path
-    end
   end
 
   def contributor_confirmation
